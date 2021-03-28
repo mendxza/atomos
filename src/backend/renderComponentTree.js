@@ -78,8 +78,7 @@ export default function renderComponentTree(node) {
     // if node has an unnamed child, recurse into that child without incrementing depth
     // Unnamed children are HTML elements that hold components within them, but not components themselves
     // concatenate both result arrays to create ReactFlow data w/ component and edge info
-    return result.concat(result2);
   }
-
-  return makeNodes(node);
+  makeNodes(node);
+  return result.concat(result2);
 }
